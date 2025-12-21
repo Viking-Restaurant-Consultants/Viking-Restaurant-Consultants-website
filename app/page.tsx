@@ -1,3 +1,5 @@
+'use client';
+
 import { 
   Award, 
   TrendingUp, 
@@ -8,11 +10,35 @@ import {
   ArrowRight,
   Mail,
   Phone,
-  ExternalLink
+  ExternalLink,
+  Menu,
+  X
 } from 'lucide-react';
 import Image from "next/image";
+import { useState, FormEvent } from 'react';
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [formStatus, setFormStatus] = useState<string>('');
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message'),
+    };
+    
+    // In a real application, this would send data to a backend
+    console.log('Form data:', data);
+    setFormStatus('Thank you! We will get back to you soon.');
+    (e.target as HTMLFormElement).reset();
+    
+    // Clear status message after 5 seconds
+    setTimeout(() => setFormStatus(''), 5000);
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -35,8 +61,50 @@ export default function Home() {
               <a href="#odins-almanac" className="hover:text-[#d4af37] transition-colors">Odin&apos;s Almanac</a>
               <a href="#contact" className="hover:text-[#d4af37] transition-colors">Contact</a>
             </div>
+            <button 
+              className="md:hidden"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-[#1e3a5f] border-t border-[#2c5f8d]">
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              <a 
+                href="#about" 
+                className="block px-3 py-2 rounded-md hover:bg-[#2c5f8d] transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About
+              </a>
+              <a 
+                href="#services" 
+                className="block px-3 py-2 rounded-md hover:bg-[#2c5f8d] transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Services
+              </a>
+              <a 
+                href="#odins-almanac" 
+                className="block px-3 py-2 rounded-md hover:bg-[#2c5f8d] transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Odin&apos;s Almanac
+              </a>
+              <a 
+                href="#contact" 
+                className="block px-3 py-2 rounded-md hover:bg-[#2c5f8d] transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
@@ -315,7 +383,12 @@ export default function Home() {
               </div>
               <div className="bg-gray-50 rounded-lg p-8">
                 <h3 className="text-2xl font-bold text-[#1e3a5f] mb-6">Quick Contact Form</h3>
-                <form className="space-y-4">
+                {formStatus && (
+                  <div className="mb-4 p-4 bg-green-100 text-green-700 rounded-lg">
+                    {formStatus}
+                  </div>
+                )}
+                <form className="space-y-4" onSubmit={handleSubmit}>
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
                       Name
@@ -324,6 +397,7 @@ export default function Home() {
                       type="text"
                       id="name"
                       name="name"
+                      required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1e3a5f] focus:border-transparent"
                       placeholder="Your name"
                     />
@@ -336,6 +410,7 @@ export default function Home() {
                       type="email"
                       id="email"
                       name="email"
+                      required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1e3a5f] focus:border-transparent"
                       placeholder="your@email.com"
                     />
@@ -348,6 +423,7 @@ export default function Home() {
                       id="message"
                       name="message"
                       rows={4}
+                      required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1e3a5f] focus:border-transparent"
                       placeholder="Tell us about your restaurant..."
                     ></textarea>
