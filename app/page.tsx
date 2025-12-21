@@ -30,7 +30,8 @@ export default function Home() {
       message: formData.get('message'),
     };
     
-    // In a real application, this would send data to a backend
+    // Note: In a production environment, this would send data to a backend API
+    // For now, this is a demo form that logs data to console
     console.log('Form data:', data);
     setFormStatus('Thank you! We will get back to you soon.');
     (e.target as HTMLFormElement).reset();
@@ -64,7 +65,8 @@ export default function Home() {
             <button 
               className="md:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label="Toggle mobile navigation menu"
+              aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -426,7 +428,11 @@ export default function Home() {
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1e3a5f] focus:border-transparent"
                       placeholder="Tell us about your restaurant..."
+                      aria-describedby="message-help"
                     ></textarea>
+                    <p id="message-help" className="sr-only">
+                      Tell us about your restaurant and how we can help you
+                    </p>
                   </div>
                   <button
                     type="submit"
