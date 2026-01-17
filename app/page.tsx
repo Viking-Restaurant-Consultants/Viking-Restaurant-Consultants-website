@@ -369,7 +369,7 @@ export default function Home() {
                     </div>
                     <div>
                       <p className="text-sm text-gray-300">Email</p>
-                      <p className="font-semibold">contact@vikingrestaurantconsultants.com</p>
+                      <p className="font-semibold">william@vikingrestaurantconsultants.com</p>
                     </div>
                   </div>
                   <div className="flex items-center">
