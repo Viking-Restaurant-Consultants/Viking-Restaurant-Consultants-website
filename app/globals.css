@@ -1,54 +1,119 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Outfit:wght@300;400;600&display=swap');
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-  --font-heading: "Cinzel", serif;
-  --font-body: "Outfit", sans-serif;
+@layer base {
+  :root {
+    --background: 220 25% 8%;
+    --foreground: 40 15% 92%;
 
-  --color-viking-gold: #D4AF37;
-  --color-viking-gold-glow: rgba(212, 175, 55, 0.4);
-  --color-deep-slate: #0B1120;
-  --color-nordic-blue: #1E293B;
-  
-  --animate-shine: shine 5s linear infinite;
-  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  
-  @keyframes shine {
-    to {
-      background-position: 200% center;
-    }
+    --card: 220 22% 11%;
+    --card-foreground: 40 15% 92%;
+
+    --popover: 220 22% 11%;
+    --popover-foreground: 40 15% 92%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 220 25% 8%;
+
+    --secondary: 220 20% 14%;
+    --secondary-foreground: 40 15% 92%;
+
+    --muted: 220 18% 16%;
+    --muted-foreground: 220 12% 55%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 220 25% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 18% 18%;
+    --input: 220 18% 18%;
+    --ring: 38 90% 52%;
+
+    --radius: 0.75rem;
+    --radius-sm: calc(0.75rem - 4px);
+    --radius-lg: calc(0.75rem + 4px);
+    --radius-full: 9999px;
+
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+    --shadow-md: 0 4px 12px -2px rgb(0 0 0 / 0.3);
+    --shadow-lg: 0 12px 28px -6px rgb(0 0 0 / 0.35);
+
+    --duration-fast: 150ms;
+    --duration-normal: 250ms;
+    --duration-slow: 350ms;
+
+    --chart-1: 38 90% 52%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 12 76% 61%;
+    --chart-4: 197 37% 50%;
+    --chart-5: 280 60% 55%;
   }
 }
 
-/* Custom Utilities if needed, but Theme handles most */
-.nordic-noise::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-  opacity: 0.03;
-  pointer-events: none;
-  z-index: 100;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
-body {
-  background-color: var(--color-deep-slate);
-  color: #F8FAFC;
-  font-family: var(--font-body);
+[data-hydration-error] {
+  display: none !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
+html {
+  scroll-behavior: smooth;
 }
 
-.gold-glow {
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+/* Blue gradient text */
+.text-gradient-gold {
+  background: linear-gradient(135deg, hsl(217, 91%, 55%), hsl(210, 100%, 70%), hsl(217, 91%, 55%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.gold-glow-hover:hover {
-  box-shadow: 0 0 40px rgba(212, 175, 55, 0.5);
-  transform: translateY(-5px);
+/* Subtle section dividers */
+.section-dark {
+  background: hsl(220, 22%, 11%);
+}
+
+.section-darker {
+  background: hsl(220, 25%, 8%);
+}
+
+.section-elevated {
+  background: hsl(220, 20%, 13%);
+}
+
+/* Card glow on hover */
+.card-glow {
+  transition: all 0.35s ease;
+  border: 1px solid hsl(220, 18%, 18%);
+}
+
+.card-glow:hover {
+  border-color: hsl(217, 91%, 60%, 0.3);
+  box-shadow: 0 0 30px -8px hsl(217, 91%, 60%, 0.12), 0 12px 28px -8px rgb(0 0 0 / 0.3);
+  transform: translateY(-2px);
+}
+
+/* Blue glow button */
+.btn-glow {
+  box-shadow: 0 0 20px -4px hsl(217, 91%, 60%, 0.4);
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 28px -2px hsl(217, 91%, 60%, 0.5);
+}
+
+/* Subtle grid pattern */
+.bg-grid {
+  background-image: radial-gradient(circle at 1px 1px, hsl(220, 18%, 18%) 1px, transparent 0);
+  background-size: 48px 48px;
 }
