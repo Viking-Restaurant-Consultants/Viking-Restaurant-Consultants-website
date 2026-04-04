@@ -32,9 +32,9 @@ export function HeroSection() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="font-display text-4xl sm:text-5xl lg:text-[3.5rem] font-bold tracking-tight leading-[1.1] mb-6"
             >
-              <span className="text-white">Stop Losing Money.</span>
+              <span className="text-white">Architects of AI for</span>
               <br />
-              <span className="text-gradient-gold">Start Preventing Problems.</span>
+              <span className="text-gradient-gold">Hospitality and Learning.</span>
             </motion.h1>
 
             <motion.p
@@ -43,8 +43,7 @@ export function HeroSection() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-lg sm:text-xl text-[hsl(220,12%,65%)] max-w-xl mb-10 leading-relaxed"
             >
-              Odin&apos;s Almanac is the AI-powered restaurant operations platform that unifies food safety, financial intelligence, and predictive ordering &mdash; saving the average restaurant{' '}
-              <span className="text-[hsl(217,91%,60%)] font-semibold">$3,500 per month</span>.
+              We don't just consult; we build the core intelligence engines that power modern operations and education. Proud creators of <span className="text-[hsl(217,91%,60%)] font-semibold">Odin's Almanac</span> and <span className="text-[hsl(217,91%,60%)] font-semibold">ClipSifter</span>.
             </motion.p>
 
             <motion.div
@@ -54,18 +53,20 @@ export function HeroSection() {
               className="flex flex-col sm:flex-row gap-4"
             >
               <Link
-                href="/contact?demo=true"
+                href="/odins-almanac"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold bg-[hsl(217,91%,60%)] text-[hsl(220,25%,8%)] rounded-xl hover:bg-[hsl(217,91%,68%)] transition-all btn-glow group"
               >
-                Book a Free Demo
+                Odin's Almanac
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
-              <Link
-                href="/odins-almanac"
+              <a
+                href="https://tubesift.web.app"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white border border-[hsl(220,18%,25%)] rounded-xl hover:bg-white/5 hover:border-[hsl(220,18%,30%)] transition-all"
               >
-                Explore Features
-              </Link>
+                ClipSifter
+              </a>
             </motion.div>
           </div>
 

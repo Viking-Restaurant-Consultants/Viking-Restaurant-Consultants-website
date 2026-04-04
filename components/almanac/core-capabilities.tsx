@@ -13,7 +13,7 @@ const capabilities = [
     highlights: ['8 specialized knowledge domains', 'Context-aware conversations', 'Operational playbooks included'],
     color: 'text-amber-400',
     bg: 'bg-amber-400/10',
-    image: 'https://cdn.abacus.ai/images/7dc723bd-b961-4cc4-88bb-ac5611c0e84d.png',
+    image: '/uploads/product-host-simpleonboarding3.png',
     imageAlt: 'Odin\'s Almanac AI model and backend management system powering restaurant intelligence',
   },
   {
