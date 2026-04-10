@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 import { ReactNode } from 'react'
 
 interface SectionAnimateProps {
@@ -12,8 +11,6 @@ interface SectionAnimateProps {
 }
 
 export function SectionAnimate({ children, className = '', delay = 0, direction = 'up' }: SectionAnimateProps) {
-  const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true })
-
   const getInitial = () => {
     switch (direction) {
       case 'left': return { opacity: 0, x: -40 }
@@ -23,11 +20,20 @@ export function SectionAnimate({ children, className = '', delay = 0, direction 
     }
   }
 
+  const getAnimate = () => {
+    switch (direction) {
+      case 'left':
+      case 'right': return { opacity: 1, x: 0 }
+      case 'none': return { opacity: 1 }
+      default: return { opacity: 1, y: 0 }
+    }
+  }
+
   return (
     <motion.div
-      ref={ref}
       initial={getInitial()}
-      animate={inView ? { opacity: 1, x: 0, y: 0 } : getInitial()}
+      whileInView={getAnimate()}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.6, delay, ease: 'easeOut' }}
       className={className}
     >
