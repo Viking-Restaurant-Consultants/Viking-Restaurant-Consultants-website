@@ -66,10 +66,10 @@ export function Header() {
               </Link>
             )) ?? []}
             <Link
-              href="/contact?demo=true"
+              href="/contact"
               className="ml-4 px-6 py-2.5 text-sm font-semibold bg-[hsl(217,91%,60%)] text-[hsl(220,25%,8%)] rounded-lg hover:bg-[hsl(217,91%,68%)] transition-all btn-glow"
             >
-              Book a Demo
+              Contact us
             </Link>
           </nav>
 
@@ -103,11 +103,11 @@ export function Header() {
                 </Link>
               )) ?? []}
               <Link
-                href="/contact?demo=true"
+                href="/contact"
                 onClick={() => setMobileOpen(false)}
                 className="block px-4 py-3 text-base font-semibold text-[hsl(220,25%,8%)] bg-[hsl(217,91%,60%)] rounded-lg text-center mt-2"
               >
-                Book a Demo
+                Contact us
               </Link>
             </div>
           </motion.div>

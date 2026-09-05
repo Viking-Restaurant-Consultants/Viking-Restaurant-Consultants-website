@@ -63,8 +63,8 @@ export function AboutContent() {
                   <div className="text-sm text-[hsl(220,12%,55%)] mt-1">Years Experience</div>
                 </div>
                 <div className="p-5 rounded-2xl bg-[hsl(220,22%,11%)] border border-[hsl(220,18%,18%)]">
-                  <div className="text-3xl font-bold text-[hsl(217,91%,60%)] font-mono">4</div>
-                  <div className="text-sm text-[hsl(220,12%,55%)] mt-1">Patents Pending</div>
+                  <div className="text-xl sm:text-2xl font-bold text-[hsl(217,91%,60%)] font-mono">Pending</div>
+                  <div className="text-sm text-[hsl(220,12%,55%)] mt-1">Patent Status</div>
                 </div>
                 <div className="p-5 rounded-2xl bg-[hsl(220,22%,11%)] border border-[hsl(220,18%,18%)]">
                   <div className="text-3xl font-bold text-[hsl(217,91%,60%)] font-mono">2</div>
@@ -138,7 +138,7 @@ export function AboutContent() {
                   <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
                 </Link>
                 <span className="text-[hsl(220,12%,35%)]">&bull;</span>
-                <span className="text-[hsl(220,12%,55%)]">4 Patents Pending</span>
+                <span className="text-[hsl(220,12%,55%)]">Patent Pending</span>
               </div>
             </div>
           </SectionAnimate>
