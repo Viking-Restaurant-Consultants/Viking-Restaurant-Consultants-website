@@ -28,6 +28,7 @@ export function Footer() {
             <h4 className="text-sm font-semibold uppercase tracking-wider text-[hsl(220,12%,45%)]">Quick Links</h4>
             <div className="space-y-2.5">
               <Link href="/odins-almanac" className="block text-sm text-[hsl(220,12%,65%)] hover:text-[hsl(217,91%,60%)] transition-colors">Odin&apos;s Almanac</Link>
+              <Link href="/templates" className="block text-sm text-[hsl(220,12%,65%)] hover:text-[hsl(217,91%,60%)] transition-colors">P&amp;L Templates</Link>
               <Link href="/pricing" className="block text-sm text-[hsl(220,12%,65%)] hover:text-[hsl(217,91%,60%)] transition-colors">Pricing</Link>
               <Link href="/about" className="block text-sm text-[hsl(220,12%,65%)] hover:text-[hsl(217,91%,60%)] transition-colors">About</Link>
               <Link href="/contact" className="block text-sm text-[hsl(220,12%,65%)] hover:text-[hsl(217,91%,60%)] transition-colors">Contact</Link>
