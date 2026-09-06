@@ -4,13 +4,36 @@ import { SectionAnimate } from '@/components/section-animate'
 import { CounterAnimation } from '@/components/counter-animation'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Target, Users, Award, Star, Play, Brain, ChefHat, Video, Lightbulb, ExternalLink } from 'lucide-react'
+import { ArrowRight, Users, Star, Play, Brain, ChefHat, Video, ExternalLink, Swords, Briefcase, Sparkles, Repeat, Mountain, Smile, ShieldCheck, BookOpen, Scale, Medal } from 'lucide-react'
 
+/**
+ * The twelve pillars, verbatim in substance from docs/business/BRAND_GUIDELINES.md
+ * (§ Core Values) in the Odin's Almanac repository, which is the canonical source.
+ *
+ * Pride is the twelfth and it reads differently from the rest on purpose. The other
+ * eleven describe what the firm brings to an operator; Pride describes what the operator
+ * is meant to end up with — a clean kitchen and a product worth their name on it. It was
+ * added to the brand document at the founder's direction, not invented here.
+ *
+ * What stood here before was a set of four generic startup values — Innovation First,
+ * Precision, Partnership, Proven Results — that had been written for this site and
+ * matched nothing the company had ever published. If these are edited, edit the brand
+ * guidelines first and copy the result here; this file is downstream of that document,
+ * not a second opinion about it.
+ */
 const values = [
-  { icon: Lightbulb, title: 'Innovation First', description: 'We don’t follow industry playbooks — we write new ones with AI and automation.' },
-  { icon: Target, title: 'Precision', description: 'Every data point, every algorithm, every recommendation is built on accuracy and rigor.' },
-  { icon: Users, title: 'Partnership', description: 'We work alongside the people we build for — operators, learners, and creators.' },
-  { icon: Award, title: 'Proven Results', description: 'Measured outcomes and real ROI. Not promises — performance.' },
+  { icon: Swords, title: 'Strength', description: 'Powerful support when it is needed most. Robust tools, dependable uptime, and analysis that holds up in a bad week.' },
+  { icon: Users, title: 'Teamwork', description: 'We succeed together as partners. Shared dashboards and tools a whole team can work in, not just the owner.' },
+  { icon: Briefcase, title: 'Professionalism', description: 'Excellence in every interaction. A clean interface, clear communication, and deliverables we put our name on.' },
+  { icon: Sparkles, title: 'Quality', description: 'Premium solutions, no compromises. Rigorous testing and attention to the details nobody else checks.' },
+  { icon: Repeat, title: 'Consistency', description: 'Reliable results every time. Accurate calculations and predictable behavior, day after day.' },
+  { icon: Mountain, title: 'Perseverance', description: 'We do not give up on problems. Persistent support and continuous improvement until the thing actually works.' },
+  { icon: Smile, title: 'Satisfaction', description: 'Your happiness is the priority. Design built around real needs, responsive support, and feedback that changes the product.' },
+  { icon: ShieldCheck, title: 'Safety', description: 'Protecting what matters. Food safety tools, data security, and compliance built in rather than bolted on.' },
+  { icon: BookOpen, title: 'Experience', description: 'Real knowledge, not theory. Built by people who have worked the shift, not read about it.' },
+  { icon: Scale, title: 'Integrity', description: 'Honest and transparent, always. Clear pricing and truthful insights, including when the news is bad.' },
+  { icon: Brain, title: 'Knowledge', description: 'Wisdom you can act on. Data-driven recommendations grounded in genuine industry expertise.' },
+  { icon: Medal, title: 'Pride', description: 'Your restaurant is worth being proud of. A clean kitchen, a product worth your name on it, and a room you are glad to show anyone.' },
 ]
 
 export function AboutContent() {
@@ -22,10 +45,10 @@ export function AboutContent() {
           <div className="text-center mb-20">
             <p className="text-sm font-semibold text-[hsl(217,91%,60%)] uppercase tracking-wider mb-3">Our Story</p>
             <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-white mb-5">
-              From Restaurant Floors to AI Platforms
+              Twenty-Five Years on the Floor
             </h1>
             <p className="text-[hsl(220,12%,55%)] text-lg max-w-3xl mx-auto">
-              Viking Restaurant Consultants started with one mission: help restaurants succeed. Today, we’re building AI-powered tools that are changing how entire industries learn, operate, and grow.
+              Viking Restaurant Consultants is a restaurant consulting company, and the mission has not changed since day one: help restaurants succeed. The tools came later, built from the everyday problems that twenty-five years in the field turned up.
             </p>
           </div>
         </SectionAnimate>
@@ -63,12 +86,12 @@ export function AboutContent() {
                   <div className="text-sm text-[hsl(220,12%,55%)] mt-1">Years Experience</div>
                 </div>
                 <div className="p-5 rounded-2xl bg-[hsl(220,22%,11%)] border border-[hsl(220,18%,18%)]">
-                  <div className="text-3xl font-bold text-[hsl(217,91%,60%)] font-mono">4</div>
-                  <div className="text-sm text-[hsl(220,12%,55%)] mt-1">Patents Pending</div>
+                  <div className="text-xl sm:text-2xl font-bold text-[hsl(217,91%,60%)] font-mono">Pending</div>
+                  <div className="text-sm text-[hsl(220,12%,55%)] mt-1">Patent Status</div>
                 </div>
                 <div className="p-5 rounded-2xl bg-[hsl(220,22%,11%)] border border-[hsl(220,18%,18%)]">
                   <div className="text-3xl font-bold text-[hsl(217,91%,60%)] font-mono">2</div>
-                  <div className="text-sm text-[hsl(220,12%,55%)] mt-1">AI Platforms</div>
+                  <div className="text-sm text-[hsl(220,12%,55%)] mt-1">Platforms Built</div>
                 </div>
               </div>
             </div>
@@ -80,13 +103,13 @@ export function AboutContent() {
           <div className="rounded-3xl p-12 sm:p-16 bg-gradient-to-br from-[hsl(220,22%,13%)] via-[hsl(220,22%,15%)] to-[hsl(217,30%,17%)] border border-[hsl(220,18%,18%)] mb-28 text-center">
             <p className="text-sm font-semibold text-[hsl(217,91%,60%)] uppercase tracking-wider mb-4">The Bigger Picture</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-white mb-6 max-w-3xl mx-auto">
-              It’s Not Just About Restaurants Anymore
+              Why There Are Two Products
             </h2>
             <p className="text-[hsl(220,12%,65%)] text-lg max-w-3xl mx-auto leading-relaxed mb-4">
-              What started as coaching and teaching restaurant owners has evolved into something far bigger. William didn’t just build tools for one industry — he discovered a universal problem: <span className="text-white font-medium">the way we learn from video content is fundamentally inefficient.</span>
+              Teaching himself to build the first one turned up a second problem, and it had nothing to do with restaurants: <span className="text-white font-medium">the way we learn from video is fundamentally inefficient.</span> Thousands of hours of tutorials to find the ninety seconds that mattered.
             </p>
             <p className="text-[hsl(220,12%,65%)] text-lg max-w-3xl mx-auto leading-relaxed">
-              Today, Viking Restaurant Consultants is the force behind two AI platforms that are redefining how people operate businesses and how they learn from video. Same founder. Same relentless drive. Two industries transformed.
+              Viking Restaurant Consultants is a restaurant consulting company, and that has not changed. But the same habit produced both tools — hit a problem often enough, then build the thing that should have existed. One came out of running restaurants. The other came out of learning how to build for them.
             </p>
           </div>
         </SectionAnimate>
@@ -138,7 +161,7 @@ export function AboutContent() {
                   <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
                 </Link>
                 <span className="text-[hsl(220,12%,35%)]">&bull;</span>
-                <span className="text-[hsl(220,12%,55%)]">4 Patents Pending</span>
+                <span className="text-[hsl(220,12%,55%)]">Patent Pending</span>
               </div>
             </div>
           </SectionAnimate>
@@ -212,19 +235,24 @@ export function AboutContent() {
             <h2 className="font-display text-3xl font-bold tracking-tight text-white">
               Our Core Values
             </h2>
+            <p className="text-[hsl(220,12%,55%)] max-w-2xl mx-auto mt-4">
+              The twelve pillars the company is built on.
+            </p>
           </div>
         </SectionAnimate>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-28">
+        {/* Eleven cards, so the stagger runs by row rather than by index — an i * 0.1
+            delay would leave the last pillar waiting a full second after the first. */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-28">
           {values?.map?.((v: any, i: number) => {
             const Icon = v?.icon
             return (
-              <SectionAnimate key={v?.title ?? i} delay={i * 0.1}>
-                <div className="p-7 rounded-2xl bg-[hsl(220,22%,11%)] border border-[hsl(220,18%,18%)] text-center card-hover h-full">
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[hsl(217,91%,60%)]/10 mb-5">
-                    {Icon && <Icon className="w-7 h-7 text-[hsl(217,91%,60%)]" />}
+              <SectionAnimate key={v?.title ?? i} delay={(i % 4) * 0.08}>
+                <div className="p-6 rounded-2xl bg-[hsl(220,22%,11%)] border border-[hsl(220,18%,18%)] card-hover h-full">
+                  <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[hsl(217,91%,60%)]/10 mb-4">
+                    {Icon && <Icon className="w-5 h-5 text-[hsl(217,91%,60%)]" />}
                   </div>
-                  <h3 className="font-display text-lg font-semibold mb-2 text-white">{v?.title ?? ''}</h3>
+                  <h3 className="font-display text-base font-semibold mb-2 text-white tracking-wide uppercase">{v?.title ?? ''}</h3>
                   <p className="text-sm text-[hsl(220,12%,55%)] leading-relaxed">{v?.description ?? ''}</p>
                 </div>
               </SectionAnimate>
