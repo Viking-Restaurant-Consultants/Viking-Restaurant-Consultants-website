@@ -45,7 +45,7 @@ export function AboutContent() {
           <div className="text-center mb-20">
             <p className="text-sm font-semibold text-[hsl(217,91%,60%)] uppercase tracking-wider mb-3">Our Story</p>
             <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-white mb-5">
-              From Restaurant Floors to AI Platforms
+              Twenty-Five Years on the Floor
             </h1>
             <p className="text-[hsl(220,12%,55%)] text-lg max-w-3xl mx-auto">
               Viking Restaurant Consultants is a restaurant consulting company, and the mission has not changed since day one: help restaurants succeed. The tools came later, built from the everyday problems that twenty-five years in the field turned up.
@@ -91,7 +91,7 @@ export function AboutContent() {
                 </div>
                 <div className="p-5 rounded-2xl bg-[hsl(220,22%,11%)] border border-[hsl(220,18%,18%)]">
                   <div className="text-3xl font-bold text-[hsl(217,91%,60%)] font-mono">2</div>
-                  <div className="text-sm text-[hsl(220,12%,55%)] mt-1">AI Platforms</div>
+                  <div className="text-sm text-[hsl(220,12%,55%)] mt-1">Platforms Built</div>
                 </div>
               </div>
             </div>
@@ -103,13 +103,13 @@ export function AboutContent() {
           <div className="rounded-3xl p-12 sm:p-16 bg-gradient-to-br from-[hsl(220,22%,13%)] via-[hsl(220,22%,15%)] to-[hsl(217,30%,17%)] border border-[hsl(220,18%,18%)] mb-28 text-center">
             <p className="text-sm font-semibold text-[hsl(217,91%,60%)] uppercase tracking-wider mb-4">The Bigger Picture</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-white mb-6 max-w-3xl mx-auto">
-              It’s Not Just About Restaurants Anymore
+              Why There Are Two Products
             </h2>
             <p className="text-[hsl(220,12%,65%)] text-lg max-w-3xl mx-auto leading-relaxed mb-4">
-              What started as coaching and teaching restaurant owners has evolved into something far bigger. William didn’t just build tools for one industry — he discovered a universal problem: <span className="text-white font-medium">the way we learn from video content is fundamentally inefficient.</span>
+              Teaching himself to build the first one turned up a second problem, and it had nothing to do with restaurants: <span className="text-white font-medium">the way we learn from video is fundamentally inefficient.</span> Thousands of hours of tutorials to find the ninety seconds that mattered.
             </p>
             <p className="text-[hsl(220,12%,65%)] text-lg max-w-3xl mx-auto leading-relaxed">
-              Today, Viking Restaurant Consultants is the force behind two AI platforms that are redefining how people operate businesses and how they learn from video. Same founder. Same relentless drive. Two industries transformed.
+              Viking Restaurant Consultants is a restaurant consulting company, and that has not changed. But the same habit produced both tools — hit a problem often enough, then build the thing that should have existed. One came out of running restaurants. The other came out of learning how to build for them.
             </p>
           </div>
         </SectionAnimate>
