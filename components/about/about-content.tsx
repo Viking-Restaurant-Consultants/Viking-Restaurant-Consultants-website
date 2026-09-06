@@ -4,11 +4,16 @@ import { SectionAnimate } from '@/components/section-animate'
 import { CounterAnimation } from '@/components/counter-animation'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Users, Star, Play, Brain, ChefHat, Video, ExternalLink, Swords, Briefcase, Sparkles, Repeat, Mountain, Smile, ShieldCheck, BookOpen, Scale } from 'lucide-react'
+import { ArrowRight, Users, Star, Play, Brain, ChefHat, Video, ExternalLink, Swords, Briefcase, Sparkles, Repeat, Mountain, Smile, ShieldCheck, BookOpen, Scale, Medal } from 'lucide-react'
 
 /**
- * The eleven pillars, verbatim in substance from docs/business/BRAND_GUIDELINES.md
+ * The twelve pillars, verbatim in substance from docs/business/BRAND_GUIDELINES.md
  * (§ Core Values) in the Odin's Almanac repository, which is the canonical source.
+ *
+ * Pride is the twelfth and it reads differently from the rest on purpose. The other
+ * eleven describe what the firm brings to an operator; Pride describes what the operator
+ * is meant to end up with — a clean kitchen and a product worth their name on it. It was
+ * added to the brand document at the founder's direction, not invented here.
  *
  * What stood here before was a set of four generic startup values — Innovation First,
  * Precision, Partnership, Proven Results — that had been written for this site and
@@ -28,6 +33,7 @@ const values = [
   { icon: BookOpen, title: 'Experience', description: 'Real knowledge, not theory. Built by people who have worked the shift, not read about it.' },
   { icon: Scale, title: 'Integrity', description: 'Honest and transparent, always. Clear pricing and truthful insights, including when the news is bad.' },
   { icon: Brain, title: 'Knowledge', description: 'Wisdom you can act on. Data-driven recommendations grounded in genuine industry expertise.' },
+  { icon: Medal, title: 'Pride', description: 'Your restaurant is worth being proud of. A clean kitchen, a product worth your name on it, and a room you are glad to show anyone.' },
 ]
 
 export function AboutContent() {
@@ -42,7 +48,7 @@ export function AboutContent() {
               From Restaurant Floors to AI Platforms
             </h1>
             <p className="text-[hsl(220,12%,55%)] text-lg max-w-3xl mx-auto">
-              Viking Restaurant Consultants started with one mission: help restaurants succeed. Today, we’re building AI-powered tools that are changing how entire industries learn, operate, and grow.
+              Viking Restaurant Consultants is a restaurant consulting company, and the mission has not changed since day one: help restaurants succeed. The tools came later, built from the everyday problems that twenty-five years in the field turned up.
             </p>
           </div>
         </SectionAnimate>
@@ -230,7 +236,7 @@ export function AboutContent() {
               Our Core Values
             </h2>
             <p className="text-[hsl(220,12%,55%)] max-w-2xl mx-auto mt-4">
-              The eleven pillars the company is built on.
+              The twelve pillars the company is built on.
             </p>
           </div>
         </SectionAnimate>

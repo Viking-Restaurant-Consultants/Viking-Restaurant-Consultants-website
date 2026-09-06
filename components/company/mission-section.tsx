@@ -15,12 +15,13 @@ import {
   BookOpen,
   Scale,
   Brain,
+  Medal,
 } from 'lucide-react'
 
 /**
  * Mission and core values.
  *
- * Both the mission statement and the eleven pillars below are taken from
+ * Both the mission statement and the twelve pillars below are taken from
  * docs/business/BRAND_GUIDELINES.md in the Odin's Almanac repository, which is the
  * canonical brand document. An earlier version of this section carried a mission
  * statement and four "commitments" that were written for this page and had never been
@@ -48,6 +49,7 @@ const pillars = [
   { icon: BookOpen, name: 'Experience', line: 'From people who have worked the shift' },
   { icon: Scale, name: 'Integrity', line: 'Honest pricing, honest numbers' },
   { icon: Brain, name: 'Knowledge', line: 'Insight you can act on today' },
+  { icon: Medal, name: 'Pride', line: 'A kitchen and a product worth your name on it' },
 ]
 
 export function MissionSection() {
@@ -79,7 +81,7 @@ export function MissionSection() {
                 Our Core Values
               </p>
               <h3 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-white">
-                The eleven pillars we are built on
+                The twelve pillars we are built on
               </h3>
             </div>
             <Link
@@ -92,7 +94,7 @@ export function MissionSection() {
           </div>
         </SectionAnimate>
 
-        {/* Eleven items, so the stagger runs by column rather than by index — a delay of
+        {/* Twelve items, so the stagger runs by column rather than by index — a delay of
             index * 0.08 would leave the last pillar nearly a second behind the first. */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {pillars?.map?.((p: any, index: number) => {

@@ -10,16 +10,16 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mon
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXTAUTH_URL || 'http://localhost:3000'),
-  title: 'Viking Restaurant Consultants | Hospitality Consulting & Software',
+  title: 'Viking Restaurant Consultants | Restaurant Consulting',
   description:
-    "A hospitality consultancy that builds its own software. Twenty-five years of restaurant management behind Odin's Almanac, our P&L workbooks, and ClipSifter.",
+    "A restaurant consulting company. Twenty-five years on the floor, and tools built to solve the everyday problems that experience turned up — Odin's Almanac, our P&L workbooks, and ClipSifter.",
   icons: {
     icon: '/favicon.svg',
     shortcut: '/favicon.svg',
   },
   openGraph: {
     title: 'Viking Restaurant Consultants',
-    description: 'A hospitality consultancy that builds its own software. Restaurant operations, profit and loss workbooks, and food safety systems.',
+    description: 'A restaurant consulting company. Restaurant operations, profit and loss workbooks, and food safety systems, built from twenty-five years in the field.',
     images: ['/og-image.png'],
   },
 }

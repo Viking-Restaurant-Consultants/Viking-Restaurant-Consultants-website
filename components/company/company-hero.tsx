@@ -32,7 +32,7 @@ export function CompanyHero() {
               className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[hsl(220,18%,22%)] mb-8"
             >
               <span className="text-[11px] font-semibold tracking-[0.18em] uppercase text-[hsl(220,12%,60%)]">
-                Hospitality consulting &amp; software
+                Restaurant consulting
               </span>
             </motion.div>
 
@@ -53,9 +53,9 @@ export function CompanyHero() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-lg text-[hsl(220,12%,65%)] max-w-xl mb-10 leading-relaxed"
             >
-              Viking Restaurant Consultants is a hospitality consultancy that builds its own
-              software. Twenty-five years of restaurant management, turned into practical
-              tools for the operators still standing on the floor.
+              Viking Restaurant Consultants is a restaurant consulting company. Our tools
+              were built from twenty-five years in the field, to solve the everyday problems
+              that experience turned up — not from a product roadmap.
             </motion.p>
 
             <motion.div
